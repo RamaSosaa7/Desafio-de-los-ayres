@@ -4,12 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Desafío de los Ayres</title>
-    <meta name="description" content="Desafío de los Ayres — sitio oficial. Toda la información, novedades y contenido del Desafío de los Ayres.">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://www.desafiodelosayres.com.ar/">
     <link rel="icon" type="image/png" href="fotos/logo_desafio-01.png">
-    <!-- Nuevas Tipografías: Montserrat (textos) y Anton/Antonio (títulos) -->
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Antonio:wght@400;700&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Tipografías: Montserrat (textos) y Anton/Antonio (títulos) -->
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Antonio:wght@400;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- FontAwesome para los íconos de las redes sociales -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- CSS -->
@@ -20,25 +17,27 @@
     <!-- NAVEGACIÓN SUPERIOR -->
     <nav class="navbar" id="navbar">
         <a href="#" class="logo">
-            <!-- Reemplazá "logo-colegio.png" por tu logo principal -->
+            <!-- Reemplazá "logo_desafio-01.png" por tu logo principal -->
             <img src="fotos/logo_desafio-01.png" alt="Logo Colegio">
         </a>
         <ul class="nav-links">
             <li><a href="#">Inicio</a></li>
             <li><a href="#informacion">Información</a></li>
             <li><a href="#inscripcion">Inscripción</a></li>
+            <li><a href="#contacto">Contacto</a></li> <!-- NUEVO ENLACE -->
         </ul>
     </nav>
 
     <!-- 1. BANNER -->
     <header class="banner-container">
         <div class="banner-overlay"></div>
+        <h1>Desafío de los Ayres</h1>
         <img src="fotos/colegio.jpeg" alt="Banner de la Correcaminata" id="parallax-img">
     </header>
 
     <!-- 2. INFORMACIÓN -->
     <section class="info-section fade-up" id="informacion">
-        <h1>¡SUMATE AL DESAFÍO DE LOS AYRES!</h1>
+        <h1>¡SUMATE AL DESAFÍO 2026!</h1>
         
         <p class="description fade-up delay-1">
             Celebramos los 20 años del Colegio Ayres del Cerro, con una actividad que ha sido parte esencial de nuestra historia: la Correcaminata Solidaria “Desafío de los Ayres”
@@ -56,9 +55,8 @@
             Desde sus inicios, la Correcaminata “Desafío de los Ayres” siempre tuvo un fin solidario, destinando lo recaudado a distintas entidades de nuestra comunidad. En esta oportunidad, la totalidad de lo recaudado será a beneficio del Hospital Municipal Ramón Santamarina de nuestra ciudad, acompañando y fortaleciendo una institución tan valiosa para todos.
         </p>
 
-        <!-- NUEVO BOTÓN: VER RECORRIDO (Más chico, enlaza a Instagram) -->
+        <!-- BOTÓN: VER RECORRIDO -->
         <div class="recorrido-container fade-up delay-3">
-            <!-- Reemplazá el "#" por el link de tu publicación de Instagram -->
             <a href="https://www.instagram.com/reels/Dbo1ij9E9Pq/" target="_blank" class="btn-recorrido">
                 VER RECORRIDO <i class="fab fa-instagram"></i>
             </a>
@@ -67,19 +65,19 @@
         <!-- GRILLA DE TARJETAS -->
         <div class="details-grid">
             <div class="detail-card fade-up delay-1">
-                <h2>📅 Fecha</h2>
+                <h3>📅 Fecha</h3>
                 <p>25 de Octubre</p>
             </div>
             <div class="detail-card fade-up delay-2">
-                <h2>🕒 Horario</h2>
+                <h3>🕒 Horario</h3>
                 <p>09:00 AM</p>
             </div>
             <div class="detail-card fade-up delay-3">
-                <h2>📍 Lugar</h2>
+                <h3>📍 Lugar</h3>
                 <p>Fulton 456/466, Colegio Ayres del Cerro</p>
             </div>
             <div class="detail-card fade-up delay-4">
-                <h2>🏃 Distancias</h2>
+                <h3>🏃 Distancias</h3>
                 <div class="distancia-texto">
                     <span><strong>Caminantes:</strong> 5km</span>
                     <span><strong>Corredores:</strong> 5 o 10km</span>
@@ -95,22 +93,45 @@
         </a>
     </section>
 
+    <!-- 4. FORMULARIO DE CONTACTO (NUEVO) -->
+    <section class="contacto-section fade-up" id="contacto">
+        <h2>CONTACTANOS</h2>
+        <p class="description">¿Tenés alguna duda? Escribinos y te responderemos a la brevedad.</p>
+        
+<!-- Reemplazá TU_ID_DE_FORMSPREE con tu código real -->
+        <form action="https://formspree.io/f/mwlebojy" method="POST" class="contact-form fade-up delay-1" id="miFormulario">
+            <div class="input-group">
+                <label for="nombre">Nombre completo</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ingresá tu nombre" required>
+            </div>
+            <div class="input-group">
+                <label for="email">Correo electrónico</label>
+                <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
+            </div>
+            <div class="input-group">
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribí tu consulta acá..." required></textarea>
+            </div>
+            <button type="submit" class="btn-enviar">ENVIAR MENSAJE</button>
+            
+            <!-- NUEVO: Contenedor oculto para el cartel -->
+            <div id="form-status" class="form-status-message hidden"></div>
+        </form>
+    </section>
+
     <!-- FOOTER / PIE DE PÁGINA -->
     <footer class="footer">
         <div class="footer-content">
             
             <!-- Columna 1: Info del Colegio -->
             <div class="footer-col">
-                <!-- Reemplazá con el nombre del colegio -->
-                <p class="footerr">Colegio <span class="negrita">Ayres</span> del Cerro</p>
+                <!-- Título con la palabra envuelta en un span para aplicarle la negrita sutil -->
+                <h2>Colegio <span class="palabra-destacada">Ayres</span> del Cerro</h2>
                 <p class="derechos">Todos los derechos reservados</p>
                 <div class="social-links">
-                    <!-- Reemplazá los # por los links reales -->
                     <a href="https://www.facebook.com/colegioayresdelcerro" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
                     <a href="https://www.instagram.com/colegioayresdelcerro/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-                    <!-- Nuevo ícono para la web del colegio -->
                     <a href="https://colegioayresdelcerro.edu.ar/#" target="_blank" title="Página Web" class="web-logo-link">
-                        <!-- Reemplazá "icono-web.png" por la imagen reducida del logo para este botón -->
                         <img src="fotos/logo_ayres-01.png" alt="Web del Colegio">
                     </a>
                 </div>
@@ -123,6 +144,7 @@
                     <li><a href="#">Inicio</a></li>
                     <li><a href="#informacion">Información</a></li>
                     <li><a href="#inscripcion">Inscripción</a></li>
+                    <li><a href="#contacto">Contacto</a></li> <!-- NUEVO ENLACE -->
                 </ul>
             </div>
 
