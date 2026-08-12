@@ -8,6 +8,10 @@
     --color-fondo: #fafafa;
 }
 
+html {
+    scroll-padding-top: 30vh; /* Deja un margen del 30% del alto de la pantalla */
+}
+
 /* --- ESTILOS GENERALES --- */
 * {
     margin: 0;
