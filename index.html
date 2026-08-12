@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Correcaminata - ¡Sumate!</title>
+    <link rel="icon" type="image/png" href="fotos/logo_desafio-01.png">
+    <!-- Nuevas Tipografías: Montserrat (textos) y Anton/Antonio (títulos) -->
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Antonio:wght@400;700&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome para los íconos de las redes sociales -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- NAVEGACIÓN SUPERIOR -->
+    <nav class="navbar" id="navbar">
+        <a href="#" class="logo">
+            <!-- Reemplazá "logo-colegio.png" por tu logo principal -->
+            <img src="fotos/logo_desafio-01.png" alt="Logo Colegio">
+        </a>
+        <ul class="nav-links">
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#informacion">Información</a></li>
+            <li><a href="#inscripcion">Inscripción</a></li>
+        </ul>
+    </nav>
+
+    <!-- 1. BANNER -->
+    <header class="banner-container">
+        <div class="banner-overlay"></div>
+        <img src="fotos/colegio.jpg" alt="Banner de la Correcaminata" id="parallax-img">
+    </header>
+
+    <!-- 2. INFORMACIÓN -->
+    <section class="info-section fade-up" id="informacion">
+        <h1>¡SUMATE AL DESAFÍO 2026!</h1>
+        
+        <p class="description fade-up delay-1">
+            Celebramos los 20 años del Colegio Ayres del Cerro, con una actividad que ha sido parte esencial de nuestra historia: la Correcaminata Solidaria “Desafío de los Ayres”
+        </p>
+
+        <img src="foto-1.jpg" alt="Gente corriendo" class="info-image fade-up delay-1">
+
+        <p class="description fade-up delay-2">
+            La correcaminata es una actividad abierta a toda la comunidad, en la que se puede participar caminando o corriendo. Cuenta con una modalidad participativa, orientada al encuentro, y también con instancias de carácter competitivo para aquellos corredores y caminantes que practican habitualmente este tipo de pruebas.
+        </p>
+
+        <img src="foto-2.jpg" alt="Llegada a la meta" class="info-image fade-up delay-2">
+
+        <p class="description fade-up delay-3">
+            Desde sus inicios, la Correcaminata “Desafío de los Ayres” siempre tuvo un fin solidario, destinando lo recaudado a distintas entidades de nuestra comunidad. En esta oportunidad, la totalidad de lo recaudado será a beneficio del Hospital Municipal Ramón Santamarina de nuestra ciudad, acompañando y fortaleciendo una institución tan valiosa para todos.
+        </p>
+
+        <!-- NUEVO BOTÓN: VER RECORRIDO (Más chico, enlaza a Instagram) -->
+        <div class="recorrido-container fade-up delay-3">
+            <!-- Reemplazá el "#" por el link de tu publicación de Instagram -->
+            <a href="https://www.instagram.com/reels/Dbo1ij9E9Pq/" target="_blank" class="btn-recorrido">
+                VER RECORRIDO <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+
+        <!-- GRILLA DE TARJETAS -->
+        <div class="details-grid">
+            <div class="detail-card fade-up delay-1">
+                <h3>📅 Cuándo</h3>
+                <p>25 de Octubre</p>
+            </div>
+            <div class="detail-card fade-up delay-2">
+                <h3>🕒 Horario</h3>
+                <p>09:00 AM</p>
+            </div>
+            <div class="detail-card fade-up delay-3">
+                <h3>📍 Dónde</h3>
+                <p>Fulton 466, Colegio Ayres del Cerro</p>
+            </div>
+            <div class="detail-card fade-up delay-4">
+                <h3>🏃 Distancias</h3>
+                <div class="distancia-texto">
+                    <span><strong>Caminantes:</strong> 5km</span>
+                    <span><strong>Corredores:</strong> 5 o 10km</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. BOTÓN AL FORMULARIO -->
+    <section class="cta-section fade-up delay-1" id="inscripcion">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfh9owlMcFblasOuKQG9QRwgc4ml12YXOs5aIS5cSiabBChqQ/viewform" target="_blank" class="btn-inscribite">
+            ¡INSCRIBITE YA!
+        </a>
+    </section>
+
+    <!-- FOOTER / PIE DE PÁGINA -->
+    <footer class="footer">
+        <div class="footer-content">
+            
+            <!-- Columna 1: Info del Colegio -->
+            <div class="footer-col">
+                <!-- Reemplazá con el nombre del colegio -->
+                <h2>Nombre del Colegio</h2>
+                <p class="derechos">Todos los derechos reservados</p>
+                <div class="social-links">
+                    <!-- Reemplazá los # por los links reales -->
+                    <a href="https://www.facebook.com/colegioayresdelcerro" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/colegioayresdelcerro/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <!-- Nuevo ícono para la web del colegio -->
+                    <a href="https://colegioayresdelcerro.edu.ar/#" target="_blank" title="Página Web" class="web-logo-link">
+                        <!-- Reemplazá "icono-web.png" por la imagen reducida del logo para este botón -->
+                        <img src="fotos/logo_ayres-01.png" alt="Web del Colegio">
+                    </a>
+                </div>
+            </div>
+
+            <!-- Columna 2: Navegación del Footer -->
+            <div class="footer-col">
+                <h3>Navegación</h3>
+                <ul class="footer-nav">
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#informacion">Información</a></li>
+                    <li><a href="#inscripcion">Inscripción</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- Columna 3: Créditos -->
+        <div class="footer-bottom">
+            <p>By Ramiro Sosa</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,453 @@
+/* --- VARIABLES DE COLORES (TU NUEVA PALETA) --- */
+:root {
+    --color-marino: #12204B; 
+    --color-celeste: #98B4D4; 
+    --color-dorado: #CE9B51; 
+    --color-blanco: #FFFFFF;
+    --color-negro: #000000;
+    --color-fondo: #fafafa;
+}
+
+/* --- ESTILOS GENERALES --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--color-fondo);
+    background-image: url("data:image/svg+xml,%3Csvg width='150' height='150' viewBox='0 0 150 150' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%2312204B' fill-opacity='0.04'%3E%3C!-- Montaña --%3E%3Cpath d='M20 130 l15-20 l10 10 l15-25 l25 35 z'/%3E%3C!-- Hoja/Arbol --%3E%3Cpath d='M110 30 c-10-10-20 0-20 15 c10 10 20 0 20-15 z'/%3E%3C!-- Huella --%3E%3Cpath d='M100 110 c-3-8-8-8-10 0 c3 8 8 8 10 0 m12 0 c-3-8-8-8-10 0 c3 8 8 8 10 0'/%3E%3C/g%3E%3Cg fill='none' stroke='%2312204B' stroke-width='3' stroke-linecap='round' stroke-opacity='0.04'%3E%3C!-- Flechas --%3E%3Cpath d='M30 40 l10 10 l-10 10 m15-20 l10 10 l-10 10'/%3E%3C/g%3E%3C/svg%3E");
+    background-repeat: repeat;
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Tipografía para Títulos */
+h1, h2, h3, .btn-inscribite, .btn-recorrido {
+    font-family: 'Antonio', sans-serif;
+    text-transform: uppercase;
+}
+
+/* --- NAVEGACIÓN (NAVBAR) --- */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+    z-index: 100;
+    transition: background 0.4s ease, padding 0.4s ease, box-shadow 0.4s ease;
+}
+
+.navbar.scrolled {
+    background: var(--color-marino); 
+    padding: 10px 5%;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+}
+
+.logo img {
+    height: 50px; 
+    transition: all 0.3s ease;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--color-blanco);
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--color-dorado);
+}
+
+.navbar.scrolled .nav-links a {
+    color: var(--color-blanco);
+}
+.navbar.scrolled .nav-links a:hover {
+    color: var(--color-dorado);
+}
+
+/* --- 1. BANNER CON PARALLAX --- */
+.banner-container {
+    position: relative;
+    width: 100%;
+    height: 70vh; 
+    min-height: 400px;
+    overflow: hidden;
+    background-color: var(--color-marino);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120%; 
+    object-fit: cover;
+    z-index: 1;
+    transition: opacity 1s ease-in-out; 
+}
+
+.banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(18, 32, 75, 0.8) 0%, rgba(18, 32, 75, 0.2) 50%, rgba(18, 32, 75, 0.8) 100%);
+    z-index: 2;
+}
+
+/* --- 2. SECCIÓN DE INFORMACIÓN --- */
+.info-section {
+    position: relative;
+    z-index: 3;
+    max-width: 900px; 
+    margin: -50px auto 60px;
+    padding: 50px 40px;
+    background: var(--color-blanco);
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+.info-section h1 {
+    font-size: 3.5rem; 
+    color: var(--color-marino); 
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+.info-section p.description {
+    font-size: 1.15rem;
+    color: #444; 
+    margin: 20px 0;
+    line-height: 1.8;
+}
+
+/* --- NUEVO BOTÓN CHICO: VER RECORRIDO --- */
+.recorrido-container {
+    text-align: center;
+    margin: 10px 0 40px; /* Le da aire arriba y lo separa de las tarjetas abajo */
+}
+
+.btn-recorrido {
+    position: relative;
+    display: inline-block;
+    background: var(--color-dorado); 
+    color: var(--color-blanco);
+    font-size: 1rem; /* Más chiquito que el de inscribirse */
+    letter-spacing: 1px;
+    text-decoration: none;
+    padding: 10px 25px; /* Menos relleno para que sea un botón secundario */
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(206, 155, 81, 0.4); 
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn-recorrido i {
+    margin-left: 5px;
+    font-size: 1.1rem;
+}
+
+.btn-recorrido::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-marino); 
+    z-index: -2;
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: transform 0.3s ease;
+}
+
+.btn-recorrido:hover::after {
+    transform: scaleY(1);
+}
+
+.btn-recorrido:hover {
+    transform: translateY(-3px);
+    color: var(--color-blanco);
+    box-shadow: 0 10px 20px rgba(18, 32, 75, 0.3);
+}
+
+/* --- ESTILO PARA LAS FOTOS --- */
+.info-image {
+    width: 100%;
+    max-height: 350px;
+    object-fit: cover; 
+    border-radius: 15px; 
+    margin: 25px 0;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1); 
+}
+
+/* --- TARJETAS --- */
+.details-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+    margin-top: 20px; /* Reduje esto un poco porque el botón de recorrido ya suma margen */
+}
+
+.detail-card {
+    background: var(--color-blanco);
+    padding: 25px 15px;
+    border-radius: 15px;
+    border: 1px solid #f0f0f0;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.03);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: default;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.detail-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(18, 32, 75, 0.15); 
+    border-color: var(--color-dorado); 
+}
+
+.detail-card h3 {
+    font-size: 1.2rem;
+    color: var(--color-marino);
+    letter-spacing: 1.5px;
+    margin-bottom: 10px;
+}
+
+.detail-card p {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+}
+
+/* --- TARJETA DE DISTANCIAS --- */
+.distancia-texto {
+    display: flex;
+    flex-direction: column;
+    gap: 8px; 
+}
+
+.distancia-texto span {
+    background-color: var(--color-celeste); 
+    padding: 6px 10px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    color: var(--color-marino); 
+    font-weight: 600;
+}
+
+.distancia-texto span strong {
+    color: var(--color-marino); 
+    font-weight: 700;
+}
+
+/* --- 3. BOTÓN (CTA) --- */
+.cta-section {
+    text-align: center;
+    padding-bottom: 80px; 
+}
+
+.btn-inscribite {
+    position: relative;
+    display: inline-block;
+    background: var(--color-dorado); 
+    color: var(--color-blanco);
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+    text-decoration: none;
+    padding: 16px 50px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 25px rgba(206, 155, 81, 0.4); 
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn-inscribite::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-marino); 
+    z-index: -2;
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: transform 0.3s ease;
+}
+
+.btn-inscribite:hover::after {
+    transform: scaleY(1);
+}
+
+.btn-inscribite:hover {
+    transform: translateY(-5px);
+    color: var(--color-blanco);
+    box-shadow: 0 15px 35px rgba(18, 32, 75, 0.4);
+}
+
+/* --- 4. FOOTER --- */
+.footer {
+    background-color: var(--color-marino); 
+    color: var(--color-fondo);
+    padding-top: 50px;
+}
+
+.footer-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.footer-col h2 {
+    color: var(--color-blanco);
+    font-size: 2rem;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+.derechos {
+    font-size: 0.85rem;
+    color: var(--color-celeste); 
+    margin-bottom: 20px;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255,255,255,0.1);
+    color: var(--color-blanco);
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    background-color: var(--color-dorado); 
+    transform: translateY(-3px);
+    color: var(--color-blanco);
+}
+
+.social-links a img {
+    width: 22px;
+    height: 22px;
+    object-fit: contain; 
+    transition: filter 0.3s ease;
+}
+
+.footer-col h3 {
+    color: var(--color-dorado); 
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.footer-nav {
+    list-style: none;
+}
+
+.footer-nav li {
+    margin-bottom: 10px;
+}
+
+.footer-nav a {
+    color: var(--color-fondo);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-weight: 300;
+}
+
+.footer-nav a:hover {
+    color: var(--color-dorado);
+}
+
+.footer-bottom {
+    background-color: #0c1533; 
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 40px;
+}
+
+.footer-bottom p {
+    font-size: 0.8rem;
+    color: var(--color-celeste);
+    letter-spacing: 0.5px;
+}
+
+/* --- CLASES PARA ANIMACIONES JS --- */
+.fade-up {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.delay-1 { transition-delay: 0.1s; }
+.delay-2 { transition-delay: 0.2s; }
+.delay-3 { transition-delay: 0.3s; }
+.delay-4 { transition-delay: 0.4s; }
+
+/* --- RESPONSIVE (CELULARES) --- */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 5%;
+        background: var(--color-marino); 
+    }
+    .info-section {
+        margin: -30px 15px 40px;
+        padding: 30px 20px;
+    }
+    .info-section h1 { font-size: 2.6rem; }
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .social-links {
+        justify-content: center;
+    }
+}
