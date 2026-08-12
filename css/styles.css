@@ -319,6 +319,16 @@ h1, h2, h3, .btn-inscribite, .btn-recorrido {
     padding-top: 50px;
 }
 
+.footerr {
+    font-size: 30px;
+    transform: scaleY(1.4);
+    margin-bottom: 10px;
+}
+
+.negrita {
+    font-weight: 600;
+}
+
 .footer-content {
     max-width: 1000px;
     margin: 0 auto;
@@ -330,6 +340,7 @@ h1, h2, h3, .btn-inscribite, .btn-recorrido {
 }
 
 .footer-col h2 {
+    font-family: 'Arial Narrow', Arial, Helvetica, sans-serif;
     color: var(--color-blanco);
     font-size: 2rem;
     margin-bottom: 5px;
