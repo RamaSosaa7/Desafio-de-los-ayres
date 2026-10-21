@@ -8,10 +8,6 @@
     --color-fondo: #fafafa;
 }
 
-html {
-    scroll-padding-top: 30vh; /* Deja un margen del 30% del alto de la pantalla */
-}
-
 /* --- ESTILOS GENERALES --- */
 * {
     margin: 0;
@@ -19,6 +15,10 @@ html {
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
     scroll-behavior: smooth;
+}
+
+html {
+    scroll-padding-top: 25vh; 
 }
 
 body {
@@ -126,7 +126,7 @@ h1, h2, h3, .btn-inscribite, .btn-recorrido {
     position: relative;
     z-index: 3;
     max-width: 900px; 
-    margin: -50px auto 60px;
+    margin: -50px auto 40px;
     padding: 50px 40px;
     background: var(--color-blanco);
     border-radius: 20px;
@@ -266,10 +266,105 @@ h1, h2, h3, .btn-inscribite, .btn-recorrido {
     font-weight: 700;
 }
 
-/* --- 3. BOTÓN (CTA) --- */
+
+/* --- 3. NUEVAS PASTILLAS DE INFORMACIÓN (INSCRIPCIÓN Y KITS) --- */
+.info-adicional-section {
+    position: relative;
+    z-index: 3;
+    max-width: 900px;
+    margin: 0 auto 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 0 15px;
+}
+
+.info-pill {
+    background: linear-gradient(135deg, #3aa0ff 0%, #1a82e2 100%); /* Celeste vibrante elegante */
+    color: var(--color-blanco);
+    padding: 35px 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(58, 160, 255, 0.25);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-pill:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(58, 160, 255, 0.35);
+}
+
+.info-pill h2 {
+    font-size: 2.2rem;
+    color: var(--color-blanco);
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+.pill-subtitle {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.95);
+    margin-bottom: 25px;
+}
+
+.pill-list {
+    list-style: none;
+    display: inline-block;
+    text-align: left;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 600px;
+}
+
+.pill-list li {
+    font-size: 1.05rem;
+    font-weight: 500;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 12px 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.pill-list li i {
+    color: var(--color-dorado);
+    font-size: 1.2rem;
+}
+
+.pill-content-center {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.pill-content-center p {
+    font-size: 1.05rem;
+    font-weight: 500;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 12px 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.pill-content-center p i {
+    color: var(--color-dorado);
+    font-size: 1.2rem;
+}
+
+
+/* --- 4. BOTÓN (CTA) --- */
 .cta-section {
     text-align: center;
-    padding-bottom: 80px; 
+    padding-bottom: 60px; 
 }
 
 .btn-inscribite {
@@ -313,7 +408,7 @@ h1, h2, h3, .btn-inscribite, .btn-recorrido {
 }
 
 
-/* --- 4. SECCIÓN DE CONTACTO (NUEVO) --- */
+/* --- 5. SECCIÓN DE CONTACTO --- */
 .contacto-section {
     position: relative;
     z-index: 3;
@@ -369,7 +464,7 @@ h1, h2, h3, .btn-inscribite, .btn-recorrido {
     color: #333;
     background-color: #fafafa;
     transition: all 0.3s ease;
-    resize: none; /* Agregá esta línea para sacar el ajustador */
+    resize: none;
 }
 
 .input-group input:focus, 
@@ -420,25 +515,6 @@ h1, h2, h3, .btn-inscribite, .btn-recorrido {
     box-shadow: 0 10px 20px rgba(18, 32, 75, 0.3);
 }
 
-
-/* --- 5. FOOTER --- */
-.footer {
-    background-color: var(--color-marino); 
-    color: var(--color-fondo);
-    padding-top: 50px;
-}
-
-.footer-content {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 0 40px;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 40px;
-}
-
-/* --- CARTEL DEL FORMULARIO --- */
 .form-status-message {
     margin-top: 15px;
     padding: 15px;
@@ -465,11 +541,28 @@ h1, h2, h3, .btn-inscribite, .btn-recorrido {
     opacity: 0;
 }
 
-/* Modificación de tipografía solicitada (Arial Narrow estirada) */
+
+/* --- 6. FOOTER --- */
+.footer {
+    background-color: var(--color-marino); 
+    color: var(--color-fondo);
+    padding-top: 50px;
+}
+
+.footer-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
 .footer-col h2 {
     font-family: 'Arial Narrow', Arial, sans-serif;
     color: var(--color-blanco);
-    font-size: 1.5rem;
+    font-size: 2rem;
     margin-bottom: 5px;
     letter-spacing: 1px;
     display: inline-block;
@@ -479,7 +572,6 @@ h1, h2, h3, .btn-inscribite, .btn-recorrido {
     text-transform: none;
 }
 
-/* Negrita sutil para la palabra destacada */
 .footer-col h2 .palabra-destacada {
     font-weight: 600;
 }
@@ -563,26 +655,9 @@ h1, h2, h3, .btn-inscribite, .btn-recorrido {
     letter-spacing: 0.5px;
 }
 
-/* --- CLASES PARA ANIMACIONES JS --- */
-.fade-up {
-    opacity: 0;
-    transform: translateY(40px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-
-.fade-up.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.delay-1 { transition-delay: 0.1s; }
-.delay-2 { transition-delay: 0.2s; }
-.delay-3 { transition-delay: 0.3s; }
-.delay-4 { transition-delay: 0.4s; }
 
 /* --- RESPONSIVE (CELULARES) --- */
 @media (max-width: 768px) {
-    /* 1. NAVEGACIÓN (Arregla el menú desbordado) */
     .navbar {
         flex-direction: column;
         gap: 15px;
@@ -600,13 +675,11 @@ h1, h2, h3, .btn-inscribite, .btn-recorrido {
         font-size: 0.95rem;      
     }
 
-    /* 2. ESPACIADOS DE SECCIONES */
     .info-section, .contacto-section {
         margin: -30px 15px 40px;
         padding: 30px 20px;
     }
 
-    /* 3. TAMAÑO DE TÍTULOS */
     .info-section h1 { 
         font-size: 2.3rem; 
     }
@@ -615,27 +688,36 @@ h1, h2, h3, .btn-inscribite, .btn-recorrido {
         font-size: 2rem; 
     }
 
-    /* 4. FORMULARIO (Arregla el botón azul de iOS y los campos aplastados) */
+    .info-pill {
+        padding: 25px 20px;
+    }
+
+    .info-pill h2 {
+        font-size: 1.8rem;
+    }
+
+    .pill-list li, .pill-content-center p {
+        font-size: 0.95rem;
+        text-align: left;
+    }
+
     .contact-form {
         width: 100%;
     }
 
     .input-group input, 
-    .input-group textarea {
-        width: 100%;
-        -webkit-appearance: none; /* Evita que Apple sobreescriba tu diseño */
-        appearance: none;
-    }
-    
+    .input-group textarea,
     .btn-enviar {
         width: 100%;
         -webkit-appearance: none; 
         appearance: none;
+    }
+    
+    .btn-enviar {
         border-radius: 50px; 
         padding: 15px;
     }
 
-    /* 5. FOOTER */
     .footer-content {
         flex-direction: column;
         text-align: center;
@@ -645,7 +727,6 @@ h1, h2, h3, .btn-inscribite, .btn-recorrido {
         justify-content: center;
     }
 
-    /* 6. SCROLL (Para que frene bien cuando tocás un link desde el celu) */
     html {
         scroll-padding-top: 25vh; 
     }

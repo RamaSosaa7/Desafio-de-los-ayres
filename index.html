@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Desafío de los Ayres</title>
+    <title>Correcaminata - ¡Sumate!</title>
     <link rel="icon" type="image/png" href="fotos/logo_desafio-01.png">
     <!-- Tipografías: Montserrat (textos) y Anton/Antonio (títulos) -->
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Antonio:wght@400;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -17,28 +17,54 @@
     <!-- NAVEGACIÓN SUPERIOR -->
     <nav class="navbar" id="navbar">
         <a href="#" class="logo">
-            <!-- Reemplazá "logo_desafio-01.png" por tu logo principal -->
-            <img src="fotos/logo_desafio-01.png" alt="Logo Colegio"><img src="fotos/hospital-01.png" alt="Logo Colegio">
+            <img src="fotos/logo_desafio-01.png" alt="Logo Colegio"><img src="fotos/hospital-01.png" alt="Logo Hospital">
         </a>
         <ul class="nav-links">
             <li><a href="#">Inicio</a></li>
             <li><a href="#informacion">Información</a></li>
             <li><a href="#inscripcion">Inscripción</a></li>
-            <li><a href="#contacto">Contacto</a></li> <!-- NUEVO ENLACE -->
+            <li><a href="#contacto">Contacto</a></li>
         </ul>
     </nav>
 
     <!-- 1. BANNER -->
     <header class="banner-container">
         <div class="banner-overlay"></div>
-        <h1>Desafío de los Ayres</h1>
         <img src="fotos/colegio.jpeg" alt="Banner de la Correcaminata" id="parallax-img">
     </header>
 
-<!-- 2. INFORMACIÓN -->
+    <!-- 2. SECCIÓN PRINCIPAL (Título afuera, pastillas nuevas arriba y contenido original abajo) -->
     <section class="info-section" id="informacion">
-        <h1>¡SUMATE AL DESAFÍO 2026!</h1>
         
+        <!-- TÍTULO PRINCIPAL AFUERA -->
+        <h1>¡SUMATE AL DESAFÍO 2026!</h1>
+
+        <!-- NUEVAS PASTILLAS (Inscripción Presencial y Entrega de Kits) -->
+        <div class="info-adicional-section">
+            
+            <!-- Pastilla 1: Inscripción Presencial -->
+            <div class="info-pill">
+                <h2>Inscripción Presencial</h2>
+                <p class="pill-subtitle">Podés anotarte en el Colegio Ayres del Cerro – Fulton 466</p>
+                <ul class="pill-list">
+                    <li><i class="fas fa-calendar-alt"></i> Miércoles 21 a viernes 23 de 18:00 a 20:00 hs</li>
+                    <li><i class="fas fa-calendar-alt"></i> Sábado 24 de octubre de 10:00 a 12:00 y de 17:00 a 20:00 hs</li>
+                </ul>
+            </div>
+
+            <!-- Pastilla 2: Entrega de Kits -->
+            <div class="info-pill">
+                <h2>Entrega del Kit</h2>
+                <p class="pill-subtitle">Para corredores y caminantes inscriptos</p>
+                <div class="pill-content-center">
+                    <p><i class="fas fa-clock"></i> Sábado 24 de octubre, de 17:00 a 20:00 hs</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Instalaciones del Colegio Ayres del Cerro - Fulton 466</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- CONTENIDO ORIGINAL DE LA PASTILLA ANTERIOR -->
         <p class="description">
             Celebramos los 20 años del Colegio Ayres del Cerro, con una actividad que ha sido parte esencial de nuestra historia: la Correcaminata Solidaria “Desafío de los Ayres”
         </p>
@@ -52,7 +78,7 @@
         <img src="fotos/foto1-01.png" alt="Llegada a la meta" class="info-image">
 
         <p class="description">
-            Desde seus inicios, la Correcaminata “Desafío de los Ayres” siempre tuvo un fin solidario, destinando lo recaudado a distintas entidades de nuestra comunidad. En esta oportunidad, la totalidad de lo recaudado será a beneficio del Hospital Municipal Ramón Santamarina de nuestra ciudad, acompañando y fortaleciendo una institución tan valiosa para todos.
+            Desde sus inicios, la Correcaminata “Desafío de los Ayres” siempre tuvo un fin solidario, destinando lo recaudado a distintas entidades de nuestra comunidad. En esta oportunidad, la totalidad de lo recaudado será a beneficio del Hospital Municipal Ramón Santamarina de nuestra ciudad, acompañando y fortaleciendo una institución tan valiosa para todos.
         </p>
 
         <!-- BOTÓN: VER RECORRIDO -->
@@ -62,7 +88,7 @@
             </a>
         </div>
 
-        <!-- GRILLA DE TARJETAS (Quitamos los fade-up y delay) -->
+        <!-- GRILLA DE TARJETAS -->
         <div class="details-grid">
             <div class="detail-card">
                 <h3>📅 Fecha</h3>
@@ -70,11 +96,11 @@
             </div>
             <div class="detail-card">
                 <h3>🕒 Horario</h3>
-                <p>09:30 AM</p>
+                <p>09:00 AM</p>
             </div>
             <div class="detail-card">
                 <h3>📍 Lugar</h3>
-                <p>Fulton 456/466, Colegio Ayres del Cerro</p>
+                <p>Fulton 466, Colegio Ayres del Cerro</p>
             </div>
             <div class="detail-card">
                 <h3>🏃 Distancias</h3>
@@ -86,7 +112,7 @@
         </div>
     </section>
 
-<!-- 3. BOTÓN AL FORMULARIO -->
+    <!-- 3. BOTÓN AL FORMULARIO -->
     <section class="cta-section" id="inscripcion">
         <a href="https://docs.google.com/forms/d/e/1FAIpQLSfh9owlMcFblasOuKQG9QRwgc4ml12YXOs5aIS5cSiabBChqQ/viewform" target="_blank" class="btn-inscribite">
             ¡INSCRIBITE YA!
@@ -98,7 +124,7 @@
         <h2>CONTACTANOS</h2>
         <p class="description">¿Tenés alguna duda sobre la correcaminata? Escribinos y te responderemos a la brevedad.</p>
         
-        <form action="https://formspree.io/f/mwlebojy" method="POST" class="contact-form" id="miFormulario">
+        <form action="https://formspree.io/f/TU_ID_DE_FORMSPREE" method="POST" class="contact-form" id="miFormulario">
             <div class="input-group">
                 <label for="nombre">Nombre completo</label>
                 <input type="text" id="nombre" name="nombre" placeholder="Ingresá tu nombre" required>
@@ -123,7 +149,6 @@
             
             <!-- Columna 1: Info del Colegio -->
             <div class="footer-col">
-                <!-- Título con la palabra envuelta en un span para aplicarle la negrita sutil -->
                 <h2>Colegio <span class="palabra-destacada">Ayres</span> del Cerro</h2>
                 <p class="derechos">Todos los derechos reservados</p>
                 <div class="social-links">
@@ -142,7 +167,7 @@
                     <li><a href="#">Inicio</a></li>
                     <li><a href="#informacion">Información</a></li>
                     <li><a href="#inscripcion">Inscripción</a></li>
-                    <li><a href="#contacto">Contacto</a></li> <!-- NUEVO ENLACE -->
+                    <li><a href="#contacto">Contacto</a></li>
                 </ul>
             </div>
 
